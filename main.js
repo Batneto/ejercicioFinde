@@ -19,7 +19,6 @@ for (let i = 1; i <= numeroDeAlumnos; i++){
     let media = (nota1 + nota2) / 2;
     alumno.media = media;
 
-
     clase[`alumno${i}`] = alumno;
 }
 }
@@ -45,31 +44,31 @@ function calcularMediaAlta(clase) {
 
     div.append(parrafo)
 
-    // console.log();
+    
 }
 
 
-// function pintarTablaDatos(params) {
-//     for (let i = 0; i < numeroDeAlumnos; i++) {
+function pintarTablaDatos(params) {
+    for (let i = 0; i < numeroDeAlumnos; i++) {
     
-//     const fila=document.createElement("tr")
-
-//     for (let i = 1; i <= 4; i++) {
-//         let alumno=clase[`alumno${i}`]
-//           const columna=document.createElement("td")
-//           columna.textContent= alumno.nombre
-//         fila.append(columna)
-//     }
+    const fila=document.createElement("tr")
+    let tabla=document.getElementById("tabla")
+    for (let i = 1; i <= numeroDeAlumnos; i++) {
+        let alumno=clase[`alumno${i}`]
+          let columna=document.createElement("td")
+          columna.textContent= alumno.nombre
+        fila.append(columna)
+    }
   
    
-//     let tabla=document.getElementById("tabla")
+  
 
 
     
-//     tabla.append(fila)
+    tabla.append(fila)
 
-// }
-// }
+}
+}
 
 
     
@@ -82,7 +81,7 @@ function calcularMediaAlta(clase) {
 
 crearAlumnos(numeroDeAlumnos);
 calcularMediaAlta(clase);
-// pintarTablaDatos()
+pintarTablaDatos()
 // console.log(clase);
 
 
